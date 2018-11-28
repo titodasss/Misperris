@@ -1,0 +1,50 @@
+{% extends 'core/base.html' %}
+
+{% block contenido %}
+<h2>listado de adoptadores</h2>
+
+<table>
+    <tr>
+        <th>Run</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Fecha Nacimiento</th>
+        <th>Email</th>
+        <th>Telefono</th>
+        <th>Region</th>
+        <th>Ciudad</th>
+        <th>Tipo Vivienda</th>
+        <th>Opciones</th>
+    </tr>
+
+    {% for a in adoptadores %}
+
+    <tr>
+        <td>{{ a.run }}</td>
+        <td>{{ a.nombre }}</td>
+        <td>{{ a.apellido }}</td>
+        <td>{{ a.fechaNacimiento }}</td>
+        <td>{{ a.email }}</td>
+        <td>{{ a.telefono }}</td>
+        <td>{{ a.region.descripcion }}</td>
+        <td>{{ a.ciudad.descripcion }}</td>
+        <td>{{ a.tipoVivienda.descripcion }}</td>
+        <td>
+            <a href="{% url 'eliminar_adoptador' a.run %}">Eliminar</a>
+            <a href="{% url 'modificar_adoptador' a.run %}">Modificar</a>
+        </td>
+    </tr>
+    {% endfor %}
+
+
+    
+</table>
+
+{% if messages %}
+
+    {% for m in messages %}
+    <div>{{ m }}</div>
+    {% endfor %}
+{% endif %}
+
+{% endblock contenido %}

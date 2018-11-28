@@ -1,0 +1,129 @@
+{% extends "core/base.html" %}
+
+{% block contenido %}
+{% load static %}
+   
+    <div class="container-fuild">
+    <div class="col-xs-12 col-sm-12 col-md-12 contenidoImagenes">  
+           <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                  <ol class="carousel-indicators hidden-xs">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                  </ol>
+    
+                  <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                          <img class="img-responsive imagen_landing" src="{% static 'core/imagenes/perro.png' %}" alt="First slide">               
+                                <h3 class="textoImagenes">Imagen de un perro</h3>
+                          
+                        </div>
+                        <div class="item">
+                          <img class="img-responsive imagen_landing" src="{% static 'core/imagenes/adoptados/apolo.jpg' %}" alt="Second slide">
+                                 <h3 class="textoImagenes">Apolo es feliz con su nueva familia</h3>
+                  
+                        </div>
+                        <div class="item">
+                          <img class="img-responsive imagen_landing" src="{% static 'core/imagenes/adoptados/Duque.jpg' %}" alt="Third slide">                             
+                                  <h3 class="textoImagenes">Duque es feliz con su nueva familia</h3>
+    
+                        </div>
+                         <div class="item">
+                              <img class="img-responsive imagen_landing" src="{% static 'core/imagenes/adoptados/tom.jpg' %}" alt="Third slide">
+                                                               
+                                  <h3 class="textoImagenes">Tom es feliz con su nueva familia</h3>
+                           
+                        </div>
+            
+                  </div>
+                  <a class="left carousel-control" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                  </a>
+                  <a class="right carousel-control" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Siguiente</span>
+                  </a>
+         </div>           
+    </div>
+    </div>   
+    <dix class="container-fuild">
+    <dix class="hidden-xs col-sm-4 col-md-4 altura">
+          <p class="eslogan1">+56 9 98765431  </p>
+    </dix>
+     <dix class="hidden-xs col-sm-3 col-md-4 altura">
+        <p class="eslogan">Rescate y adopcion de perros callejeros</p>
+    </dix>
+     <dix class="col-xs-12 col-sm-5 col-md-4 altura">
+        <ul class="sociales">
+            <li>
+                <img alt="" src="{% static 'core/imagenes/social-twitter.png' %}" /></li>
+            <li>
+                <img alt="" src="{% static 'core/imagenes/socialfacebook.png' %}" /></li>
+            <li> 
+                <img alt="" src="{% static 'core/imagenes/socialplus.png' %}" /></li>
+            <li> 
+                <img alt="" src="{% static 'core/imagenes/socialplus.png' %}" /></li>
+        </ul>
+       </dix>
+    </dix>
+    
+    <dix class="container-fuild">
+     <div  class="cuadroimg col-xs-12 col-sm-6 col-md-6">
+        <div class="rescate"> 
+          <p  class="prescate" ><h1><strong>RESCATE</strong></h1>
+             <h3 class="et">ETAPA UNO</h3>
+             <br>
+             <hr  class="hr1"></hr>
+             <br>
+             <br>Rescatamos perros en situacion de peligro y/o abandono. 
+              Los rehabilitamos y los <br> preparamos para buscarles un hogar
+            </p>
+            <br>
+            <img  class="perroimg" src="{% static 'core/imagenes/rescate.jpg'  %}" alt="Imagen de Perrito">
+        </div>
+     </div>
+    
+    <div  class="comida col-xs-12 col-sm-6 col-md-6">
+           <img  class="comidaimg" src="{% static 'core/imagenes/crowfunding.jpg' %}" alt="imagen de comida" >
+            <p   class="prescate" ><h1 id="he" class="he"><strong>CROWDFUNDING</strong></h1>            
+            <h3  class="et">FINANCIAMIENTO</h3>
+            <br>
+            <hr  class="hr2">
+            <br>
+            <br> 
+            Sigue nuestras redes sociales para informarte acerca de las diversas campañas
+             y actividades que realizamos para obetner financiemiento para seguir ayudando.
+            </p> 
+            <br>
+             <p class="campa">CAMPAÑAS</p>
+
+    </div>
+    </div>
+
+    <div class=" container-fuild">
+            <div class=" galeria col-xs-12 col-sm-12 col-md-12">
+                <div id="c1" class="c1">
+                    <li id="columnas " class="columnas">   
+                        <a  data-fancybox="gallery" href="{% static 'core/imagenes/rescatados/Oso.jpg' %}"><img id="p1"clas="p1" src="{% static 'core/imagenes/rescatados/Oso.jpg' %}"></a>
+                        <a  data-fancybox="gallery" href="{% static 'core/imagenes/rescatados/Wifi.jpg' %}"><img src="{% static 'core/imagenes/rescatados/Wifi.jpg' %}"></a>
+                        <a  data-fancybox="gallery" href="{% static 'core/imagenes/rescatados/Maya.jpg' %}"><img src="{% static 'core/imagenes/rescatados/Maya.jpg' %}"></a>
+                    </li>
+                </div>
+                <div id="c2" class="c2">
+                    <li id="columnas2" class="columnas">
+                        <a  data-fancybox="gallery" href="{% static 'core/imagenes/rescatados/Chocolate.jpg' %}"><img src="{% static 'core/imagenes/rescatados/Chocolate.jpg' %}"></a>
+                        <a  data-fancybox="gallery" href="{% static 'core/imagenes/rescatados/Pexel.jpg' %}"><img src="{% static 'core/imagenes/rescatados/Pexel.jpg' %}"></a>                   
+                    </li>
+                </div> 
+                <div id="c3" class="c3">
+                    <li id="columnas3" class="columnas">
+                        <a  data-fancybox="gallery" href="{% static 'core/imagenes/rescatados/Luna.jpg' %}"><img src="{% static 'core/imagenes/rescatados/Luna.jpg' %}"></a>
+                        <a  data-fancybox="gallery" href="{% static 'core/imagenes/rescatados/Bigotes.jpg' %}"><img src="{% static 'core/imagenes/rescatados/Bigotes.jpg' %}"></a>
+                    </li>
+                </div>
+            </div>
+    </div>
+
+{% endblock contenido %}

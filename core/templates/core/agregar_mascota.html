@@ -1,0 +1,38 @@
+{% extends "core/base.html" %}
+{% block contenido %}
+{% load static %}
+
+<div class="container-fuild divFuildColor">
+  <div class="divContenedor col-xs-12 col-sm-12 col-md-12">
+      <form class="needs-validation formularioIngreso" action="" enctype="multipart/form-data"  method="POST">
+        {% csrf_token %}
+        {% load crispy_forms_tags %} 
+        {{ form | crispy }} 
+        
+        <label for="">Fecha de ingreso</label>
+        <input type="date" class="form-control" name="FechaI" id="FechaI">
+        <br>
+        <label for="">Fecha de nacimiento</label>
+        <input type="date" class="form-control" name="FechaN" id="FechaN">
+        
+        <button type="reset"  class="btn btn-primary">Limpiar</button>
+        <button type="submit"  class="btn btn-success">Aceptar</button>
+      </form>
+      {% if grabo == True %}
+
+      <div class="alert alert-success alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>¡Registrada!</strong> Mascota Guardada.
+      </div>
+      
+      {% endif %}
+      <h3>{{ mensaje }}</h3>
+</div>
+</div>
+{% endblock contenido %}
+{% block js %}
+{% load static %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" ></script>
+    
+{% endblock%}

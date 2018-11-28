@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mis Perris</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/estilos.css' %}">
+    <script src="{% static 'core/js/jQuery.js' %}"></script>
+    <script src="{% static 'core/js/bootstrap.min.js' %}"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container-fuild">
+            <div class="col-xs-12 col-sm-4 col-md-5">
+                <img class="logo" src="{% static 'core/imagenes/logo.png' %}" alt="logo">
+            </div>
+            <div>
+                <div class="col-xs-12 col-sm-2 col-md-1 linea">
+                    <a class="a" href="{% url 'home' %}">Inicio</a>
+                </div>
+                {% if request.user.is_authenticated %}
+                <div class="col-xs-12 col-sm-2 col-md-1 linea">
+                        <a class="a" href="{% url 'listarMascota' %}">Mascotas</a>
+                    </div>
+                
+                <div class="col-xs-12 col-sm-2 col-md-1 linea">
+                    <a class="a" href="{% url 'agregarMascota' %}">Agregar</a>
+                </div>
+                <div class="col-xs-12 col-sm-2 col-md-1 linea">
+                    <a class="a" href="{% url 'logout' %}">Salir</a>
+                </div>
+                
+                <div class="col-xs-12 col-sm-2 col-md-1 linea">
+                    <a href="">{{ request.user.first_name }}</a>
+                </div>
+                {% else %}  
+                <div class="col-xs-12 col-sm-2 col-md-1 linea">                    
+                        <a class="a" href="{% url 'formulario' %}">Registro</a>
+                </div>
+                <div class="col-xs-12 col-sm-2 col-md-1 linea">
+                    <a class="a" href="{% url 'login' %}">Login</a>
+                </div>
+                <div class="col-xs-12 col-sm-2 col-md-2">
+
+                </div>
+                {% endif %}
+            </div>
+
+        </div>
+    </header>
+
+    {% block contenido %} 
+    
+    {% endblock contenido %}   
+
+    <footer>
+        <div class="col-xs-12 col-sm-12 col-md-12 padding">
+            <p class="foot">
+                <strong>Desarrollo Web y Mobile</strong>
+            </p>
+        </div>
+    </footer>
+
+    
+
+</body>
+
+</html>

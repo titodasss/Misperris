@@ -1,0 +1,277 @@
+/*LOGIN*/
+p#login_label{
+    text-align: center;
+    font-size: 150%;
+    font-family: 'Verdana'!important;
+}
+
+.centrar-texto{
+    text-align:center;
+}
+.login_div{
+    width: 100%!important;
+    height: 11%!important;
+    margin-top:2%;
+}
+form#form_login{
+    text-align: center;
+    margin-left: 34%;
+    width: 33%;
+    height: 60%;
+    background-color: rgb(48, 179, 133);
+    border-radius: 9px;
+}
+div#div_form{
+    height: 80%;
+}
+
+label#login_label{
+    font-size: 150%;
+    font-family: 'Verdana';
+    color:rgba(231, 231, 231, 0.931);
+}
+
+/*FIN LOGIN*/
+*{
+    margin:0;
+    padding: 0;
+}
+header{
+	height: 70px;
+    background-color: rgb(109,204,170);
+}
+a{
+    text-decoration:none;
+}
+.altura{
+     background-color: rgb(109,204,170);
+     height: 170px;
+     padding: 43px;
+}
+
+.imagen_landing{
+    width:100%;
+    height:450px !important;
+}
+.contenidoImagenes{
+	    padding: 0px;
+	    background-color: white;
+}
+
+.linea{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: border-radius 0.5s;
+    font-size: 18px;
+    padding: 19px;
+    text-align: center;
+    background-color: rgb(109,204,170);
+}
+
+ .linea:hover{
+    border-radius: 25px;    
+}
+
+.a {
+    color: white;
+    font-weight: bold;    
+}
+.padding{
+    padding: 0px;
+}
+ol, ul {
+    margin-top: 8px !important;
+}
+.sociales {    
+    display: block;
+    list-style-type: disc;
+  padding: 0px;
+
+}
+.sociales li{
+    display: inline-block;
+    margin: 5%;
+}
+.sociales li img {
+    width: 38px;
+    height: 38px;
+}
+.eslogan1 {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0px;
+}
+.eslogan {
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
+}
+.cuadroimg{
+    display:inline-block;
+}
+.rescate{
+    text-align: right; 
+    margin-bottom: 11%;
+}
+.prescate{
+    margin-top:2%;
+    width:40%;
+}
+.perroimg{
+    width:50%;
+}
+.comidaimg{
+    width:50%; 
+    margin-top:2%;
+}
+.comida{
+    text-align: left;      
+}
+.btnFormulario{
+    padding: 1%;
+    width: 17%;
+    border-style: solid;
+    border-width: 1.5px;
+    font-weight: bold;
+    margin-left: 140px;
+    margin-top: -71px;
+    cursor: pointer;
+}
+.btnFormulario:hover{
+ background-color: gainsboro;
+}
+.et{
+    color:gray;
+    margin: 0px;
+}
+
+.hr1{
+     width:10%; 
+    height: 1px;
+    margin-left: 89%;
+    border-top: 3px solid #eee;
+}
+
+.hr2{
+    width:10%;  
+     height: 1px;
+     margin-right: 89%;
+    border-top: 3px solid #eee;   
+}
+.campa{
+    padding:1%;
+    width: fit-content;
+    border-style: solid;
+    border-width: 1.5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.campa:hover{
+   background-color: gainsboro;
+}
+.galeria{
+    background-color:rgb(78, 206, 157) ;
+    display:inline-block;
+    width: 100%;  
+}
+
+.galeri li{
+    display:inline-block;
+    width:5%;
+    list-style-type: none;
+}
+
+.he{
+    width:100%;
+}
+  
+.c1{ 
+    list-style-type :none ;
+    display:block;
+    float:left; 
+    width:30%;
+}
+
+.c1 img {
+    width:98%;
+}
+
+.c2{
+    list-style-type :none ;
+    display:block;
+    float:left;
+    width:20%;    
+}
+.c2 img{
+    width: 105%;
+}
+
+.c3{
+    list-style-type :none ;
+    display:block;
+    float:left;
+    width:20%;
+    margin-left:1.4%;
+}
+.c3 img{
+width: 163%;
+}
+.foot{
+     background-color: rgb(210, 216, 214);
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 0 0;
+    padding: 1% 0 5% 5%;
+}
+.textoImagenes{
+    background-color: rgba(80, 80, 80, 0.75);
+    display: block;
+    position: absolute;
+    bottom: -16px;
+    left: 0;
+    padding: 11px;
+    width: 100%;
+    font-size: 16px;
+    color:white;
+}
+/*formulario*/
+.divContenedor{
+    padding: 1%;
+    float: inherit;
+    display: flex;
+    justify-content: center;
+}
+.divFuildColor{
+    background-color: azure;
+}
+/*login*/
+.wrapper {	
+    background-color: azure;
+    padding: 1%;
+}
+
+.form-signin {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  border: 1px solid rgba(0,0,0,0.1);  
+}
+
+
+
+
+	input[type="text"] {
+	  margin-bottom: -1px;
+	  border-bottom-left-radius: 0;
+	  border-bottom-right-radius: 0;
+	}
+
+	input[type="password"] {
+	  margin-bottom: 20px;
+	  border-top-left-radius: 0;
+	  border-top-right-radius: 0;
+    }
+    .formularioIngreso{
+        border: 1px solid black;
+        padding: 1%;
+    }

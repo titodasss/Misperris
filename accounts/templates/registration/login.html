@@ -1,0 +1,21 @@
+{% extends "core/base.html" %}
+{% block contenido %}
+<div class="wrapper">
+        <form class="form-signin" action="" method="POST">    
+            {% csrf_token %}   
+          <h2 class="form-signin-heading">Iniciar Sesión</h2>
+          <input for="id_username" type="text" class="form-control" id="id_username" name="username" placeholder="Ingrese email"  autofocus/>
+          <br>
+          <input for="id_password" type="password" class="form-control" id="id_password" name="password" placeholder="Contraseña" />      
+         
+         
+         <input class="btn btn-lg btn-primary btn-block" type="submit" value="Ingresar" class="btn_login" id="btn_login">
+         <hr>
+        <a href="{% url 'social:begin' 'facebook' %}">Login con Facebook</a>
+        </form>
+        
+      </div>
+
+
+      
+{% endblock contenido %}

@@ -1,0 +1,64 @@
+{% extends 'core/base.html' %}
+
+{% block contenido %}
+
+
+<h2 class="centrar-texto">Registrarse</h2>
+<form class="form-signin" action="" id="formularioAdoptador"  method="POST">
+    
+    {% csrf_token %}
+    <label for="">Run:</label>
+    <input type="text" class="form-control" name="txtRun" id="txtRun">
+    <br>
+    <label for="">Nombre:</label>
+    <input type="text" class="form-control" name="txtNombre" id="txtNombre">
+    <br>
+    <label for="">Apellido:</label>
+    <input type="text" class="form-control" name="txtApellido" id="txtApellido">
+    <br>
+    <label for="">Fecha de nacimiento</label>
+    <input type="date" class="form-control" name="Fecha" id="Fecha">
+    <br>
+    <label for="">E-mail:</label>
+    <input type="text" class="form-control" name="txtEmail" id="txtEmail">
+    <br>
+    <label for="">Telefono</label>
+    <input type="number" class="form-control"  name="txtTelefono" id="txtTelefono">
+    <br>
+    <label for="">Region:</label>
+    <select name="cboRegion" class="custom-select my-1 mr-sm-2" id="cboRegion">
+        <option value="">Seleccionar</option>
+        {% for m in regiones %}
+
+        <option value="{{ m.id }}">{{ m.descripcion }}</option>
+
+        {% endfor %}
+
+    </select>
+    <br>
+    <label for="">Ciudad</label>
+    <select name="cboCiudad" class="custom-select my-1 mr-sm-2" id="cboCiudad">
+        <option value="">Seleccionar</option>
+        {% for n in ciudades %}
+
+        <option value="{{ n.id }}">{{ n.descripcion }}</option>
+
+        {% endfor %}
+    </select>
+    <br>
+    <label for="">Tipo de Vivienda:</label>
+    <select name="cboTipoVivienda" class="custom-select my-1 mr-sm-2" id="cboTipoVivienda">
+        <option value="">Seleccionar</option>
+        {% for v in tipoviviendas %}
+
+        <option value="{{ v.id }}">{{ v.descripcion }}</option>
+
+        {% endfor %}
+    </select>
+    <br>
+
+    <input type="submit" class="btn btn-lg btn-primary btn-block" name="btnGuardar" id="btnGuardar" value="Guardar">
+</form>
+
+    <h3>{{ mensaje }}</h3>
+{% endblock contenido %}
